@@ -1,0 +1,7 @@
+:root {
+  --header-height: 64px;
+}
+
+body {
+  @apply text-gray-900 bg-white dark:text-gray-200 dark:bg-gray-900;
+}
