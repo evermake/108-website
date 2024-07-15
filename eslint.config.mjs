@@ -26,7 +26,19 @@ export default nuxt(
 
     {
       rules: {
+        // Sometimes it's easier to define a custom class.
         'tailwindcss/no-custom-classname': 'off',
+
+        // Vue 3 officially supports fragments:
+        // https://v3-migration.vuejs.org/new/fragments.html
+        'vue/no-multiple-template-root': 'off',
+
+        // To enforce "multi-attribute elements" rule:
+        // https://vuejs.org/style-guide/rules-strongly-recommended.html#multi-attribute-elements
+        'vue/max-attributes-per-line': ['error', {
+          singleline: { max: 1 },
+          multiline: { max: 1 },
+        }],
       },
     },
   ),
