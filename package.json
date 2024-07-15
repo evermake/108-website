@@ -1,5 +1,5 @@
 {
-  "name": "@one-zero-eight/website",
+  "name": "@one-zero-eight/innohassle",
   "type": "module",
   "private": true,
   "scripts": {
@@ -14,19 +14,21 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@iconify-json/heroicons": "^1.1.22",
     "@iconify-json/ph": "^1.1.13",
-    "@iconify-json/simple-icons": "^1.1.108",
+    "@iconify-json/simple-icons": "^1.1.109",
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.17.0",
     "nuxt": "^3.12.3",
     "vue": "^3.4.31"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.22.0-beta.3",
+    "@antfu/eslint-config": "^2.22.3",
     "@nuxt/eslint": "^0.3.13",
-    "eslint": "^9.6.0",
+    "eslint": "^9.7.0",
+    "eslint-plugin-format": "^0.1.2",
     "eslint-plugin-tailwindcss": "^3.17.4",
-    "taze": "^0.14.2",
+    "taze": "^0.15.1",
     "typescript": "^5.5.3",
     "vue-tsc": "^2.0.26"
   }
