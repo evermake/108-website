@@ -1,9 +1,11 @@
 <script lang="ts" setup>
+import type { NuxtLinkProps } from '#app'
+
 defineProps<{
   title: string
   subtitle: string
   icon: string
-  to: string
+  to: NuxtLinkProps['to']
 }>()
 </script>
 
