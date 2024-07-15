@@ -12,7 +12,7 @@ const links = [
 
 <template>
   <div>
-    <Header />
+    <AppHeader />
     <main>
       <UContainer class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-6">
         <div class="h-full border-r border-gray-200 lg:col-span-2 dark:border-gray-800">
