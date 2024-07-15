@@ -18,8 +18,14 @@ defineProps<{
     <p class="text-sm text-gray-600 dark:text-gray-400">
       {{ subtitle }}
     </p>
-    <UIcon name="i-ph-arrow-square-out" class="group-hover:text-primary-600 absolute right-4 top-4 text-lg" />
-    <NuxtLink :to="to" target="_blank">
+    <UIcon
+      name="i-ph-arrow-square-out"
+      class="group-hover:text-primary-600 absolute right-4 top-4 text-lg"
+    />
+    <NuxtLink
+      :to="to"
+      target="_blank"
+    >
       <span class="absolute left-0 top-0 size-full" />
     </NuxtLink>
   </div>

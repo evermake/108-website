@@ -3,8 +3,14 @@
     <UContainer class="flex h-full items-center justify-between">
       <div class="flex items-center justify-start lg:flex-1">
         <NuxtLink to="/">
-          <NuxtImg class="h-[48px] dark:hidden" src="/img/innohassle-logo-light.svg" />
-          <NuxtImg class="hidden h-[48px] dark:block" src="/img/innohassle-logo-dark.svg" />
+          <NuxtImg
+            src="/img/innohassle-logo-light.svg"
+            class="h-[48px] dark:hidden"
+          />
+          <NuxtImg
+            src="/img/innohassle-logo-dark.svg"
+            class="hidden h-[48px] dark:block"
+          />
         </NuxtLink>
       </div>
       <nav class="hidden lg:flex lg:items-center lg:justify-between lg:gap-4">
