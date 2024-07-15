@@ -1,15 +1,15 @@
 {
-  // Disable the default formatter, use eslint instead
+  // Disable the default formatter, use ESLint instead.
   "prettier.enable": false,
   "editor.formatOnSave": false,
 
-  // Auto fix
+  // Auto fix on save using ESLint.
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
 
-  // Silent the stylistic rules in you IDE, but still auto fix them
+  // Silent the stylistic rules in you IDE, but still auto fix them.
   "eslint.rules.customizations": [
     { "rule": "style/*", "severity": "off" },
     { "rule": "format/*", "severity": "off" },
@@ -23,7 +23,7 @@
     { "rule": "*semi", "severity": "off" }
   ],
 
-  // Enable eslint for all supported languages
+  // Enable ESLint for all supported languages.
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -47,10 +47,18 @@
     "postcss"
   ],
 
+  // Enable autocompletions for Tailwind.
   "files.associations": {
     "*.css": "tailwindcss"
   },
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+  "tailwindCSS.experimental.configFile": "tailwind.config.ts",
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "ui"
+  ]
 }
