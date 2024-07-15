@@ -10,14 +10,20 @@ export default nuxt(
         indent: 2,
         quotes: 'single',
         semi: false,
+        jsx: false,
       },
 
-      formatters: true,
-
-      typescript: true,
       vue: true,
+      typescript: true,
+      formatters: true,
+      jsonc: true,
+      markdown: true,
+      yaml: true,
+      regexp: true,
     },
-    tailwind.configs['flat/recommended'],
+
+    ...tailwind.configs['flat/recommended'],
+
     {
       rules: {
         'tailwindcss/no-custom-classname': 'off',
