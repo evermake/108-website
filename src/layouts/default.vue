@@ -13,7 +13,7 @@ const links = [
 <template>
   <div>
     <Header />
-    <main class="min-h-[calc(100vh-var(--header-height))]">
+    <main>
       <UContainer class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-6">
         <div class="h-full border-r border-gray-200 lg:col-span-2 dark:border-gray-800">
           <aside class="hidden py-8 pr-6 lg:sticky lg:top-[--header-height] lg:block lg:max-h-[calc(100vh-var(--header-height))]">
