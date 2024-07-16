@@ -1,6 +1,10 @@
 <template>
-  <header class="sticky top-0 z-50 h-[--header-height] border-b border-gray-200 bg-white/35 backdrop-blur dark:border-gray-800 dark:bg-gray-900/75">
-    <UContainer class="flex h-full items-center justify-between">
+  <div class="h-[--header-height] w-full" />
+  <header
+    v-bind="$attrs"
+    class="fixed top-0 z-50 h-[--header-height] w-full border-b border-gray-200 bg-white/35 px-6 backdrop-blur dark:border-gray-800 dark:bg-gray-900/75"
+  >
+    <div class="flex h-full items-center justify-between">
       <div class="flex items-center justify-start lg:flex-1">
         <NuxtLink to="/">
           <NuxtImg
@@ -42,6 +46,6 @@
           to="https://t.me/one_zero_eight"
         />
       </div>
-    </UContainer>
+    </div>
   </header>
 </template>

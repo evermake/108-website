@@ -11,19 +11,16 @@ const links = [
 </script>
 
 <template>
-  <div>
-    <AppHeader />
-    <main>
-      <UContainer class="flex flex-col lg:grid lg:grid-cols-10 lg:gap-6">
-        <div class="h-full border-r border-gray-200 lg:col-span-2 dark:border-gray-800">
-          <aside class="hidden py-8 pr-6 lg:sticky lg:top-[--header-height] lg:block lg:max-h-[calc(100vh-var(--header-height))]">
-            <UVerticalNavigation :links="links" />
-          </aside>
-        </div>
-        <div class="lg:col-span-8">
-          <slot />
-        </div>
-      </UContainer>
-    </main>
-  </div>
+  <AppHeader />
+  <aside class="fixed bottom-0 left-0 top-[--header-height] hidden w-[--sidebar-width] overflow-y-auto border-r border-gray-200 px-6 py-8 lg:block dark:border-gray-800">
+    <UVerticalNavigation :links="links" />
+  </aside>
+  <main
+    v-bind="$attrs"
+    class="lg:pl-[--sidebar-width]"
+  >
+    <UContainer>
+      <slot />
+    </UContainer>
+  </main>
 </template>

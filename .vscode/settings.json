@@ -55,6 +55,11 @@
     "strings": true
   },
   "tailwindCSS.experimental.configFile": "tailwind.config.ts",
+  "tailwindCSS.experimental.classRegex": [
+    "tw`(.*?)`",
+    "tw\\('(.*?)'\\)",
+    "tw\\(\\s*('(.*?)'|\"(.*?)\")\\s*\\)"
+  ],
   "tailwindCSS.classAttributes": [
     "class",
     "className",
