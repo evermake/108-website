@@ -64,7 +64,7 @@ onMounted(() => {
   <AppHeader />
   <article
     v-bind="$attrs"
-    class="relative w-full px-6"
+    class="w-full px-6"
   >
     <div class="about-108 pointer-events-none absolute inset-0 z-[-1]" />
     <div class="prose mx-auto pb-12 pt-24 dark:prose-invert">
@@ -107,7 +107,7 @@ onMounted(() => {
       </section>
 
       <section class="my-16 h-[200px] lg:my-24 lg:h-[300px]">
-        <div class="no-scroll absolute left-0 flex h-[200px] w-full items-stretch justify-start gap-2 overflow-x-auto overflow-y-hidden px-2 lg:h-[300px]">
+        <div class="no-scroll absolute inset-x-0 flex h-[200px] items-stretch justify-start gap-2 overflow-x-auto overflow-y-hidden px-2 lg:h-[300px]">
           <NuxtImg
             v-for="photo in photos"
             :key="photo.path"
@@ -155,8 +155,8 @@ onMounted(() => {
   background-size: 100px 100px;
   background-repeat: repeat;
 
-  mask-position: 0% -250px;
-  mask-size: 100% 500px;
+  mask-position: 0% -300px;
+  mask-size: 100% 600px;
   mask-repeat: no-repeat;
   mask-image: radial-gradient(
     closest-side,
