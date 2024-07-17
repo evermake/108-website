@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+useHead({ title: 'Music Room' })
+</script>
+
 <template>
   <div class="py-8">
     <div class="flex flex-col items-stretch justify-between gap-4 lg:flex-row">

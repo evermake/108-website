@@ -6,6 +6,8 @@ definePageMeta({
   layout: false,
 })
 
+useHead({ title: 'About' })
+
 const members: MemberInfo[] = [
   {
     name: 'Vladislav Deryabkin',

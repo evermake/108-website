@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+useHead({ title: 'Search' })
+
 type SearchVariant = 'search' | 'ai'
 
 const variant = ref<SearchVariant>('search')
