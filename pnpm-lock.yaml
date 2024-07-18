@@ -57,6 +57,9 @@ importers:
       eslint-plugin-tailwindcss:
         specifier: ^3.17.4
         version: 3.17.4(tailwindcss@3.4.6)
+      tailwindcss:
+        specifier: ^3.4.6
+        version: 3.4.6
       taze:
         specifier: ^0.16.1
         version: 0.16.1
