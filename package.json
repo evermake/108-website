@@ -25,7 +25,6 @@
     "@vueuse/nuxt": "^10.11.0",
     "motion": "^10.18.0",
     "nuxt": "^3.12.3",
-    "radix-vue": "^1.9.1",
     "vue": "^3.4.32"
   },
   "devDependencies": {
