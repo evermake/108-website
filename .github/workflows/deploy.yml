@@ -27,7 +27,7 @@ jobs:
         run: bun install
 
       - name: Generate static website
-        run: bun run generate
+        run: bun run build:gh-pages
         env:
           NUXT_APP_BASE_URL: /${{ github.event.repository.name }}
 
