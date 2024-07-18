@@ -2,10 +2,6 @@
 import { animate } from 'motion'
 import type { MemberInfo } from '~/components/MemberAvatar.vue'
 
-definePageMeta({
-  layout: false,
-})
-
 useHead({ title: 'About' })
 
 const members: MemberInfo[] = [
@@ -67,11 +63,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <AppHeader />
-  <article
-    v-bind="$attrs"
-    class="w-full px-6"
-  >
+  <article class="w-full px-6">
     <div class="about-108 pointer-events-none absolute inset-0 z-[-1]" />
     <div class="prose mx-auto pb-12 pt-24 dark:prose-invert">
       <h1

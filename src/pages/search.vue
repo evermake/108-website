@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+definePageMeta({ layout: 'home' })
+
 useHead({ title: 'Search' })
 
 type SearchVariant = 'search' | 'ai'

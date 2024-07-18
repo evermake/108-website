@@ -1,10 +1,39 @@
+<script setup lang="ts">
+const route = useRoute()
+const mobileOpen = ref(false)
+
+if (import.meta.client) {
+  const scrollLocked = useScrollLock(document.body)
+
+  watchEffect(() => {
+    scrollLocked.value = mobileOpen.value
+  })
+}
+
+const isLargeScreen = useMediaQuery('(min-width: 1024px)')
+
+watchEffect(() => {
+  if (isLargeScreen.value)
+    mobileOpen.value = false
+})
+
+watch(() => route.fullPath, () => {
+  mobileOpen.value = false
+})
+</script>
+
 <template>
   <div class="h-[--header-height] w-full" />
   <header
     v-bind="$attrs"
-    class="fixed top-0 z-50 h-[--header-height] w-full border-b border-gray-200 bg-white/35 px-6 backdrop-blur dark:border-gray-800 dark:bg-gray-900/75"
+    :key="$route.fullPath"
+    class="fixed left-0 top-0 z-50 size-full border-b border-gray-200 bg-white/75 px-6 backdrop-blur transition-[max-height] duration-300 dark:border-gray-800 dark:bg-gray-900/85"
+    :class="{
+      'max-h-[--header-height]': !mobileOpen,
+      'max-h-full': mobileOpen,
+    }"
   >
-    <div class="flex h-full items-center justify-between">
+    <div class="flex h-[--header-height] items-center justify-between">
       <div class="flex items-center justify-start lg:flex-1">
         <NuxtLink to="/">
           <NuxtImg
@@ -17,33 +46,100 @@
           />
         </NuxtLink>
       </div>
-      <nav class="hidden lg:flex lg:items-center lg:justify-between lg:gap-4">
-        <NuxtLink
-          to="/"
-          class="hover:text-primary font-medium"
-          active-class="text-primary"
-        >
+      <nav class="hidden items-center justify-between gap-4 lg:flex">
+        <AppHeaderNavLink to="/">
           Home
-        </NuxtLink>
-        <NuxtLink
-          to="/about"
-          class="hover:text-primary font-medium"
-          active-class="text-primary"
-        >
+        </AppHeaderNavLink>
+        <AppHeaderNavLink to="/changelog">
+          Changelog
+        </AppHeaderNavLink>
+        <AppHeaderNavLink to="/about">
           About
-        </NuxtLink>
+        </AppHeaderNavLink>
       </nav>
-      <div class="flex items-center justify-end gap-2 lg:flex-1">
-        <ThemeToggle />
+      <div class="flex flex-1 items-center justify-end gap-2">
         <UButton
+          class="hidden lg:flex"
           variant="ghost"
+          color="gray"
+          icon="i-ph-telegram-logo"
+          to="https://t.me/one_zero_eight"
+          target="_blank"
+        />
+        <UButton
+          class="hidden lg:flex"
+          variant="ghost"
+          color="gray"
           icon="i-ph-github-logo"
           to="https://github.com/one-zero-eight"
+          target="_blank"
+        />
+        <UButton
+          class="hidden lg:flex"
+          variant="ghost"
+          color="gray"
+          icon="i-ph-youtube-logo"
+          to="https://youtube.com/@one-zero-eight"
+          target="_blank"
+        />
+        <span class="hidden h-[32px] w-px bg-gray-200 lg:block dark:bg-gray-800" />
+        <ThemeToggle color="gray" />
+        <UButton
+          class="lg:hidden"
+          variant="ghost"
+          color="gray"
+          :icon="mobileOpen ? 'i-ph-x' : 'i-ph-list'"
+          @click="() => {
+            mobileOpen = !mobileOpen
+          }"
+        />
+      </div>
+    </div>
+    <div class="flex h-[calc(100%-var(--header-height))] flex-col gap-4 overflow-y-auto py-6 font-medium lg:hidden lg:font-normal">
+      <AppHeaderNavLink
+        class="text-lg"
+        to="/"
+      >
+        Home
+      </AppHeaderNavLink>
+      <SectionsVerticalNavigation />
+      <AppHeaderNavLink
+        class="text-lg"
+        to="/changelog"
+      >
+        Changelog
+      </AppHeaderNavLink>
+      <AppHeaderNavLink
+        class="text-lg"
+        to="/about"
+      >
+        About
+      </AppHeaderNavLink>
+      <UDivider label="Follow us" />
+      <div class="flex items-center justify-center gap-2">
+        <UButton
+          variant="ghost"
+          color="gray"
+          icon="i-ph-telegram-logo"
+          size="xl"
+          to="https://t.me/one_zero_eight"
+          target="_blank"
         />
         <UButton
           variant="ghost"
-          icon="i-ph-telegram-logo"
-          to="https://t.me/one_zero_eight"
+          color="gray"
+          icon="i-ph-github-logo"
+          size="xl"
+          to="https://github.com/one-zero-eight"
+          target="_blank"
+        />
+        <UButton
+          variant="ghost"
+          color="gray"
+          icon="i-ph-youtube-logo"
+          size="xl"
+          to="https://youtube.com/@one-zero-eight"
+          target="_blank"
         />
       </div>
     </div>

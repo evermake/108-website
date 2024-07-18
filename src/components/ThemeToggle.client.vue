@@ -8,28 +8,40 @@ function toggleColorMode() {
       ? 'dark'
       : 'system'
 }
+
+const tooltipText = computed<string>(() => {
+  switch (colorMode.preference) {
+    case 'system':
+      return 'Switch to light'
+    case 'light':
+      return 'Switch to dark'
+  }
+  return 'Switch to system'
+})
 </script>
 
 <template>
-  <UButton
-    v-if="colorMode.preference === 'system'"
-    variant="ghost"
-    icon="i-ph-monitor"
-    title="Using system color mode."
-    @click="toggleColorMode"
-  />
-  <UButton
-    v-else-if="colorMode.value === 'light'"
-    variant="ghost"
-    icon="i-ph-sun"
-    title="Using light color mode."
-    @click="toggleColorMode"
-  />
-  <UButton
-    v-else
-    variant="ghost"
-    icon="i-ph-moon"
-    title="Using dark color mode."
-    @click="toggleColorMode"
-  />
+  <UTooltip :text="tooltipText">
+    <UButton
+      v-if="colorMode.preference === 'system'"
+      icon="i-ph-monitor"
+      color="gray"
+      variant="ghost"
+      @click="toggleColorMode"
+    />
+    <UButton
+      v-else-if="colorMode.value === 'light'"
+      icon="i-ph-sun"
+      color="gray"
+      variant="ghost"
+      @click="toggleColorMode"
+    />
+    <UButton
+      v-else
+      icon="i-ph-moon"
+      color="gray"
+      variant="ghost"
+      @click="toggleColorMode"
+    />
+  </UTooltip>
 </template>

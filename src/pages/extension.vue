@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+definePageMeta({ layout: 'home' })
+
 useHead({ title: 'Extension' })
 </script>
 
