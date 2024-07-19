@@ -20,16 +20,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Bun
-        uses: oven-sh/setup-bun@v2
+      - name: Instal pnpm
+        uses: pnpm/action-setup@v4
 
       - name: Install dependencies
-        run: bun install
+        run: pnpm install
 
       - name: Generate static website
-        run: bun run build:gh-pages
-        env:
-          NUXT_APP_BASE_URL: /${{ github.event.repository.name }}
+        run: pnpm run build:gh-pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
