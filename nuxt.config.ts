@@ -8,6 +8,10 @@ export default defineNuxtConfig({
     },
   },
 
+  devServer: {
+    port: 3108,
+  },
+
   modules: [
     /**
      * Nuxt UI automatically installs the following modules:
