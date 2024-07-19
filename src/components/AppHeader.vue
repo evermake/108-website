@@ -1,24 +1,18 @@
 <script setup lang="ts">
 const route = useRoute()
-const mobileOpen = ref(false)
+const expanded = ref(false)
+const expanding = ref(false)
 
 if (import.meta.client) {
   const scrollLocked = useScrollLock(document.body)
 
   watchEffect(() => {
-    scrollLocked.value = mobileOpen.value
+    scrollLocked.value = expanded.value
   })
 }
 
-const isLargeScreen = useMediaQuery('(min-width: 1024px)')
-
-watchEffect(() => {
-  if (isLargeScreen.value)
-    mobileOpen.value = false
-})
-
 watch(() => route.fullPath, () => {
-  mobileOpen.value = false
+  expanded.value = false
 })
 </script>
 
@@ -27,11 +21,12 @@ watch(() => route.fullPath, () => {
   <header
     v-bind="$attrs"
     :key="$route.fullPath"
-    class="fixed left-0 top-0 z-50 size-full border-b border-gray-200 bg-white/75 px-6 backdrop-blur transition-[max-height] duration-300 dark:border-gray-800 dark:bg-gray-900/85"
-    :class="{
-      'max-h-[--header-height]': !mobileOpen,
-      'max-h-full': mobileOpen,
-    }"
+    class="group/header fixed left-0 top-0 z-50 size-full max-h-[--header-height] overflow-hidden bg-white/75 px-6 backdrop-blur transition-[max-height] duration-300 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-gray-200 after:content-[''] data-[expanded]:max-h-full lg:overflow-visible lg:data-[expanded]:max-h-[--header-height] dark:bg-gray-900/85 dark:after:bg-gray-800"
+    :data-expanded="expanded || undefined"
+    :data-expanding="expanding || undefined"
+    @transitionstart="expanding = true"
+    @transitioncancel="expanding = true"
+    @transitionend="expanding = false"
   >
     <div class="flex h-[--header-height] items-center justify-between">
       <div class="flex items-center justify-start lg:flex-1">
@@ -88,14 +83,12 @@ watch(() => route.fullPath, () => {
           class="lg:hidden"
           variant="ghost"
           color="gray"
-          :icon="mobileOpen ? 'i-ph-x' : 'i-ph-list'"
-          @click="() => {
-            mobileOpen = !mobileOpen
-          }"
+          :icon="expanded ? 'i-ph-x' : 'i-ph-list'"
+          @click="expanded = !expanded"
         />
       </div>
     </div>
-    <div class="flex h-[calc(100%-var(--header-height))] flex-col gap-4 overflow-y-auto py-6 font-medium lg:hidden lg:font-normal">
+    <div class="flex h-[calc(100%-var(--header-height))] flex-col gap-4 overflow-y-auto py-6 font-medium group-data-[expanding]/header:overflow-y-hidden lg:hidden lg:font-normal">
       <AppHeaderNavLink
         class="text-lg"
         to="/"
