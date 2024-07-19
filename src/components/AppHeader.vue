@@ -21,7 +21,7 @@ watch(() => route.fullPath, () => {
   <header
     v-bind="$attrs"
     :key="$route.fullPath"
-    class="group/header fixed left-0 top-0 z-50 size-full max-h-[--header-height] overflow-hidden bg-white/75 px-6 backdrop-blur transition-[max-height] duration-300 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-gray-200 after:content-[''] data-[expanded]:max-h-full lg:overflow-visible lg:data-[expanded]:max-h-[--header-height] dark:bg-gray-900/85 dark:after:bg-gray-800"
+    class="group/header fixed left-0 top-0 z-50 size-full max-h-[--header-height] bg-white/85 px-6 backdrop-blur transition-[max-height] duration-300 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-gray-200 after:content-[''] data-[expanded]:max-h-full lg:data-[expanded]:max-h-[--header-height] dark:bg-gray-900/85 dark:after:bg-gray-800"
     :data-expanded="expanded || undefined"
     :data-expanding="expanding || undefined"
     @transitionstart="expanding = true"
@@ -88,52 +88,54 @@ watch(() => route.fullPath, () => {
         />
       </div>
     </div>
-    <div class="flex h-[calc(100%-var(--header-height))] flex-col gap-4 overflow-y-auto py-6 font-medium group-data-[expanding]/header:overflow-y-hidden lg:hidden lg:font-normal">
-      <AppHeaderNavLink
-        class="text-lg"
-        to="/"
-      >
-        Home
-      </AppHeaderNavLink>
-      <SectionsVerticalNavigation />
-      <AppHeaderNavLink
-        class="text-lg"
-        to="/changelog"
-      >
-        Changelog
-      </AppHeaderNavLink>
-      <AppHeaderNavLink
-        class="text-lg"
-        to="/about"
-      >
-        About
-      </AppHeaderNavLink>
-      <UDivider label="Follow us" />
-      <div class="flex items-center justify-center gap-2">
-        <UButton
-          variant="ghost"
-          color="gray"
-          icon="i-ph-telegram-logo"
-          size="xl"
-          to="https://t.me/one_zero_eight"
-          target="_blank"
-        />
-        <UButton
-          variant="ghost"
-          color="gray"
-          icon="i-ph-github-logo"
-          size="xl"
-          to="https://github.com/one-zero-eight"
-          target="_blank"
-        />
-        <UButton
-          variant="ghost"
-          color="gray"
-          icon="i-ph-youtube-logo"
-          size="xl"
-          to="https://youtube.com/@one-zero-eight"
-          target="_blank"
-        />
+    <div class="h-[calc(100%-var(--header-height))] overflow-y-auto group-data-[expanding]/header:overflow-y-hidden lg:hidden">
+      <div class="flex flex-col gap-4 py-6 font-medium">
+        <AppHeaderNavLink
+          class="text-lg"
+          to="/"
+        >
+          Home
+        </AppHeaderNavLink>
+        <SectionsVerticalNavigation />
+        <AppHeaderNavLink
+          class="text-lg"
+          to="/changelog"
+        >
+          Changelog
+        </AppHeaderNavLink>
+        <AppHeaderNavLink
+          class="text-lg"
+          to="/about"
+        >
+          About
+        </AppHeaderNavLink>
+        <UDivider label="Follow us" />
+        <div class="flex items-center justify-center gap-2">
+          <UButton
+            variant="ghost"
+            color="gray"
+            icon="i-ph-telegram-logo"
+            size="xl"
+            to="https://t.me/one_zero_eight"
+            target="_blank"
+          />
+          <UButton
+            variant="ghost"
+            color="gray"
+            icon="i-ph-github-logo"
+            size="xl"
+            to="https://github.com/one-zero-eight"
+            target="_blank"
+          />
+          <UButton
+            variant="ghost"
+            color="gray"
+            icon="i-ph-youtube-logo"
+            size="xl"
+            to="https://youtube.com/@one-zero-eight"
+            target="_blank"
+          />
+        </div>
       </div>
     </div>
   </header>
