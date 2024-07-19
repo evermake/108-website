@@ -13,7 +13,9 @@
     "deps": "taze -wI",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "typecheck": "vue-tsc --noEmit"
+    "lint:fix:generated": "eslint src/api/**/__generated__.ts --fix --no-ignore || true",
+    "typecheck": "vue-tsc --noEmit",
+    "generate-api": "orval --config ./orval.config.ts"
   },
   "dependencies": {
     "@iconify-json/heroicons": "^1.1.22",
@@ -21,8 +23,10 @@
     "@iconify-json/simple-icons": "^1.1.109",
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.17.0",
+    "@tanstack/vue-query": "^5.51.9",
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
+    "axios": "^1.7.2",
     "motion": "^10.18.0",
     "nuxt": "^3.12.3",
     "vue": "^3.4.32"
@@ -34,6 +38,7 @@
     "eslint": "^9.7.0",
     "eslint-plugin-format": "^0.1.2",
     "eslint-plugin-tailwindcss": "^3.17.4",
+    "orval": "^6.31.0",
     "tailwindcss": "^3.4.6",
     "taze": "^0.16.1",
     "typescript": "^5.5.3",

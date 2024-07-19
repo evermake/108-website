@@ -61,4 +61,33 @@ export default defineNuxtConfig({
       standalone: false,
     },
   },
+
+  runtimeConfig: {
+    // Override these values in .env file
+    public: {
+      // You can change URLs to use local or staging environments
+      accountsApiUrl: 'https://api.innohassle.ru/accounts/v0',
+      eventsApiUrl: 'https://api.innohassle.ru/events/v0',
+      searchApiUrl: 'https://api.innohassle.ru/search/v0',
+
+      // Should be the name of provider supported by Accounts API
+      accountsAuthProvider: 'innopolis',
+
+      // Should be the same as used by Accounts API
+      accountsBotName: 'InNoHassleBot',
+    },
+  },
+
+  nitro: {
+    devProxy: {
+      '/proxy-api': {
+        target: 'https://api.innohassle.ru',
+        changeOrigin: true,
+        prependPath: true,
+        cookiePathRewrite: {
+          '/accounts/v0': '/',
+        },
+      },
+    },
+  },
 })
