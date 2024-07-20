@@ -9,7 +9,7 @@ const members: MemberInfo[] = [
     name: 'Vladislav Deryabkin',
     color: 'green',
     city: 'Perm',
-    bio: 'Frontend dude.',
+    bio: 'At the keyboard since 3. Used to make robots. Now I enjoy swimming and diving into frontend.',
     telegram: 'evermake',
     github: 'evermake',
   },
@@ -70,6 +70,22 @@ onMounted(() => {
       </h1>
 
       <section>
+        <h2>What is it?</h2>
+
+        <p><i>one-zero-eight</i> (or just 108) — is a community of Innopolis University students passionate about technology. Our mission is to create the perfect environment for student life at our university.</p>
+
+        <p>Currently, we face many hassles and see the gaps in our daily life. Have you experienced the long page loads? Have you ever had difficulty finding the right information? Do you really find the interfaces convenient and attractive? Do you have an interesting idea but think no one will ever implement it? We felt all of this.</p>
+
+        <p>Who is going to fix this and make the word "innovative" not just an advertising slogan? Unfortunately, we don't know. Maybe, it is us?</p>
+      </section>
+
+      <section>
+        <h2>What is InNoHassle?</h2>
+
+        <p>InNoHassle (Innopolis without hassles) — is our primary project with a goal to combine all university services into one smart, convenient, performant, and beautiful ecosystem.</p>
+      </section>
+
+      <section>
         <h2>Team</h2>
 
         <p>We are a small team of students from all over the world (i.e. Russia) who have accidentally united together by enthusiasm and the desire to make our student life more enjoyable.</p>
@@ -98,6 +114,27 @@ onMounted(() => {
             <p>We are students just like you with nearly the same amount of experience and knowledge.</p>
           </li>
         </ul>
+
+        <p>But why work <i>for free</i>? Because there are reasons besides money, which are more important to us:</p>
+
+        <ul>
+          <li>
+            <h4>Team</h4>
+            <p>It's impossible to make a huge difference alone. Working together, we get mutual suppot and can achieve more ambitious results.</p>
+          </li>
+          <li>
+            <h4>Freedom</h4>
+            <p>We can use any frameworks and technologies to implement our ideas, we have no NDA, we have flexible work schedule and other things that tech companies cannot afford.</p>
+          </li>
+          <li>
+            <h4>Experience</h4>
+            <p>University courses give us good theoretical knowledge, but in order to grow as a software engineer it's crucial to gain real world experience and to write <span class="text-nowrap">A LOT of code</span>. This is exactly what we do: we create projects that are actually used by people, <s>unlike your pet projects</s>.</p>
+          </li>
+          <li>
+            <h4>Fun 🎉</h4>
+            <p>Probably, the most important part of our work — is having fun! We are young, we are 3 minutes away from each other, we have the university open 24/7 — that's why we often watch movies and eat pizza, play board games and do sports, discuss different things, participate in hackathons, brainstrom and implement interesting ideas at <span class="text-nowrap">4 a.m.</span></p>
+          </li>
+        </ul>
       </section>
 
       <section class="my-16 h-[200px] lg:my-24 lg:h-[300px]">
@@ -118,26 +155,7 @@ onMounted(() => {
       <section>
         <h2>Still want to join?</h2>
 
-        <p>We have more reasons to work hard, which are more important than money:</p>
-
-        <ul>
-          <li>
-            <h4>Experience</h4>
-            <p>University courses give us very good theoretical knowledge, but in order to grow as a software engineer it's crucial to gain real world experience and to write <span class="text-nowrap">A LOT of code</span>. And this is exactly what we are doing every day. We gain experience, which is more close to real world problems, because the code we write is actually used by people, <s>unlike your pet projects</s>.</p>
-          </li>
-          <li>
-            <h4>Team</h4>
-            <p>It's impossible to make a huge difference alone. By working together, we have suppot and can achieve more ambitious results.</p>
-          </li>
-          <li>
-            <h4>Freedom</h4>
-            <p>We can use any frameworks and technologies to implement our ideas, we have no NDA, we have flexible work schedule and other things that tech companies cannot afford.</p>
-          </li>
-          <li>
-            <h4>Fun 🎉</h4>
-            <p>Probably, the most important part of our work — is having fun! We are young, we are 3 minutes away from each other, we have the university open 24/7 — that's why we often watch movies and eat pizza, play board games and do sports, discuss different things, participate in hackathons, brainstrom and implement interesting ideas at <span class="text-nowrap">4 a.m.</span></p>
-          </li>
-        </ul>
+        <p>...</p>
       </section>
     </div>
   </article>
