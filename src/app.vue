@@ -13,6 +13,12 @@ useHead({
     { name: 'theme-color', content: colorMode.value === 'dark' ? '#171717' : '#ffffff' },
   ]),
 })
+
+onMounted(() => {
+  // Hack to enable triggering :hover on clicks in Safari on iOS.
+  // https://stackoverflow.com/a/72296894/13928742
+  document.body.onclick = () => {}
+})
 </script>
 
 <template>
