@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --header-height: 64px;
+    --sidebar-width: 250px;
+  }
+
+  html,
+  body {
+    @apply h-full;
+  }
+
+  #__nuxt {
+    @apply min-h-full;
+  }
+
+  body {
+    @apply text-gray-900 bg-white dark:text-gray-200 dark:bg-gray-900;
+  }
+}
+
 @layer components {
   .no-scroll {
     scrollbar-width: none;
@@ -10,22 +30,4 @@
   .no-scroll::-webkit-scrollbar {
     display: none;
   }
-}
-
-:root {
-  --header-height: 64px;
-  --sidebar-width: 250px;
-}
-
-html,
-body {
-  @apply h-full;
-}
-
-#__nuxt {
-  @apply min-h-full;
-}
-
-body {
-  @apply text-gray-900 bg-white dark:text-gray-200 dark:bg-gray-900;
 }

@@ -25,9 +25,10 @@ export default defineNuxtConfig({
      */
     '@nuxt/ui',
 
-    '@vueuse/nuxt',
-    '@nuxt/eslint',
+    '@nuxt/fonts',
     '@nuxt/image',
+    '@nuxt/eslint',
+    '@vueuse/nuxt',
   ],
 
   srcDir: 'src/',
@@ -35,10 +36,6 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-
-  css: [
-    '~/assets/css/main.css',
-  ],
 
   colorMode: {
     preference: 'system',

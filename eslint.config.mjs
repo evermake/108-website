@@ -41,6 +41,7 @@ export default nuxt(
         }],
       },
     },
+
     {
       ignores: ['**/__generated__.ts'],
     },

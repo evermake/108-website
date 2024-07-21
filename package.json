@@ -22,6 +22,7 @@
     "@iconify-json/heroicons": "^1.1.22",
     "@iconify-json/ph": "^1.1.13",
     "@iconify-json/simple-icons": "^1.1.109",
+    "@nuxt/fonts": "^0.7.1",
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.17.0",
     "@tanstack/vue-query": "^5.51.9",
