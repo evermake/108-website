@@ -23,22 +23,7 @@ const tooltipText = computed<string>(() => {
 <template>
   <UTooltip :text="tooltipText">
     <UButton
-      v-if="colorMode.preference === 'system'"
-      icon="i-ph-monitor"
-      color="gray"
-      variant="ghost"
-      @click="toggleColorMode"
-    />
-    <UButton
-      v-else-if="colorMode.value === 'light'"
-      icon="i-ph-sun"
-      color="gray"
-      variant="ghost"
-      @click="toggleColorMode"
-    />
-    <UButton
-      v-else
-      icon="i-ph-moon"
+      :icon="colorMode.preference === 'system' ? 'i-ph-monitor' : colorMode.value === 'light' ? 'i-ph-sun' : 'i-ph-moon'"
       color="gray"
       variant="ghost"
       @click="toggleColorMode"
