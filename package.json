@@ -2,7 +2,7 @@
   "name": "@one-zero-eight/innohassle",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.5.0",
+  "packageManager": "pnpm@9.6.0",
   "scripts": {
     "build": "nuxt build",
     "build:gh-pages": " nuxt build --preset github_pages",
@@ -19,31 +19,31 @@
     "generate-api": "orval --config ./orval.config.ts"
   },
   "dependencies": {
-    "@iconify-json/heroicons": "^1.1.22",
+    "@iconify-json/heroicons": "^1.1.23",
     "@iconify-json/ph": "^1.1.13",
-    "@iconify-json/simple-icons": "^1.1.109",
+    "@iconify-json/simple-icons": "^1.1.110",
     "@nuxt/fonts": "^0.7.1",
     "@nuxt/image": "^1.7.0",
-    "@nuxt/ui": "^2.17.0",
-    "@tanstack/vue-query": "^5.51.9",
+    "@nuxt/ui": "^2.18.2",
+    "@tanstack/vue-query": "^5.51.15",
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
     "axios": "^1.7.2",
     "motion": "^10.18.0",
-    "nuxt": "^3.12.3",
-    "vue": "^3.4.32"
+    "nuxt": "^3.12.4",
+    "vue": "^3.4.34"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.23.0",
+    "@antfu/eslint-config": "^2.23.2",
     "@nuxt/eslint": "^0.3.13",
     "@tailwindcss/typography": "^0.5.13",
-    "eslint": "^9.7.0",
+    "eslint": "^9.8.0",
     "eslint-plugin-format": "^0.1.2",
     "eslint-plugin-tailwindcss": "^3.17.4",
     "orval": "^6.31.0",
-    "tailwindcss": "^3.4.6",
+    "tailwindcss": "^3.4.7",
     "taze": "^0.16.1",
-    "typescript": "^5.5.3",
-    "vue-tsc": "^2.0.26"
+    "typescript": "^5.5.4",
+    "vue-tsc": "^2.0.29"
   }
 }
