@@ -42,14 +42,6 @@ export default defineNuxtConfig({
     fallback: 'dark',
   },
 
-  ui: {
-    icons: [
-      'heroicons',
-      'simple-icons',
-      'ph',
-    ],
-  },
-
   tailwindcss: {
     viewer: true,
     cssPath: '~/assets/css/main.css',
