@@ -44,6 +44,9 @@ importers:
       nuxt:
         specifier: ^3.12.4
         version: 3.12.4(@parcel/watcher@2.4.1)(@types/node@20.14.11)(encoding@0.1.13)(eslint@9.8.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.1)(terser@5.31.3)(typescript@5.5.4)(vite@5.3.4(@types/node@20.14.11)(terser@5.31.3))(vue-tsc@2.0.29(typescript@5.5.4))
+      openapi-fetch:
+        specifier: ^0.10.2
+        version: 0.10.2
       vue:
         specifier: ^3.4.34
         version: 3.4.34(typescript@5.5.4)
@@ -66,6 +69,9 @@ importers:
       eslint-plugin-tailwindcss:
         specifier: ^3.17.4
         version: 3.17.4(tailwindcss@3.4.7)
+      openapi-typescript:
+        specifier: ^7.1.0
+        version: 7.1.0(encoding@0.1.13)(typescript@5.5.4)
       orval:
         specifier: ^6.31.0
         version: 6.31.0(encoding@0.1.13)(openapi-types@12.1.3)(typescript@5.5.4)
@@ -1368,6 +1374,16 @@ packages:
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
 
+  '@redocly/ajv@8.11.0':
+    resolution: {integrity: sha512-9GWx27t7xWhDIR02PA18nzBdLcKQRgc46xNQvjFkrYk4UOmvKhJ/dawwiX0cCOeetN5LcaaiqQbVOWYK62SGHw==}
+
+  '@redocly/config@0.7.0':
+    resolution: {integrity: sha512-6GKxTo/9df0654Mtivvr4lQnMOp+pRj9neVywmI5+BwfZLTtkJnj2qB3D6d8FHTr4apsNOf6zTa5FojX0Evh4g==}
+
+  '@redocly/openapi-core@1.18.1':
+    resolution: {integrity: sha512-y2ZR3aaVF80XRVoFP0Dp2z5DeCOilPTuS7V4HnHIYZdBTfsqzjkO169h5JqAaifnaLsLBhe3YArdgLb7W7wW6Q==}
+    engines: {node: '>=14.19.0', npm: '>=7.0.0'}
+
   '@rollup/plugin-alias@5.1.0':
     resolution: {integrity: sha512-lpA3RZ9PdIG7qqhEfv79tBffNaoDuukFDrmhLqg9ifv99u/ehn+lOg30x2zmhf8AQqQUZaMk/B9fZraQ6/acDQ==}
     engines: {node: '>=14.0.0'}
@@ -2513,6 +2529,9 @@ packages:
 
   colord@2.9.3:
     resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
+
+  colorette@1.4.0:
+    resolution: {integrity: sha512-Y2oEozpomLn7Q3HFP7dpww7AtMJplbM9lGZP6RDfHqmbeRjiwRg4n6VM6j4KLmRke85uWEI7JqF17f3pqdRA0g==}
 
   combined-stream@1.0.8:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
@@ -3686,6 +3705,10 @@ packages:
     resolution: {integrity: sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==}
     engines: {node: '>=8'}
 
+  index-to-position@0.1.2:
+    resolution: {integrity: sha512-MWDKS3AS1bGCHLBA2VLImJz42f7bJh8wQsTGCzI3j519/CASStoDONUBVz2I/VID0MpiX3SGSnbOD2xUalbE5g==}
+    engines: {node: '>=18'}
+
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
     deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
@@ -3905,6 +3928,10 @@ packages:
     resolution: {integrity: sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==}
     hasBin: true
 
+  js-levenshtein@1.1.6:
+    resolution: {integrity: sha512-X2BB11YZtrRqY4EnQcLX5Rh373zbK4alC1FW7D7MBhL2gtcC17cTnr6DmfHZeS0s2rTHjUTMMHfG7gO8SSdw+g==}
+    engines: {node: '>=0.10.0'}
+
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -4097,6 +4124,9 @@ packages:
 
   lodash.isempty@4.4.0:
     resolution: {integrity: sha512-oKMuF3xEeqDltrGMfDxAPGIVMSSRv8tbRSODbrs4KGsRRLEhrW8N8Rd4DRgB2+621hY8A8XwwrTVhXWpxFvMzg==}
+
+  lodash.isequal@4.5.0:
+    resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
 
   lodash.isplainobject@4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
@@ -4548,12 +4578,24 @@ packages:
     resolution: {integrity: sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==}
     engines: {node: '>=12'}
 
+  openapi-fetch@0.10.2:
+    resolution: {integrity: sha512-GCzgKIZchnxZRnztiOlRTKk9tQT0NHvs5MNXYFtOwG7xaj1iCJOGDsTLbn/2QUP37PjGTT890qERFjvmjxzQMg==}
+
   openapi-types@12.1.3:
     resolution: {integrity: sha512-N4YtSYJqghVu4iek2ZUvcN/0aqH1kRDuNqzcycDxhOUpg7GdvLa2F3DgS6yBNhInhv2r/6I0Flkn7CqL8+nIcw==}
+
+  openapi-typescript-helpers@0.0.9:
+    resolution: {integrity: sha512-BO2TvIDAO/FPVKz1Nj2gy+pUOHfaoENdK5UP3H0Jbh0VXBf3dwYMs58ZwOjiezrbHA2LamdquoyQgahTPvIxGA==}
 
   openapi-typescript@6.7.6:
     resolution: {integrity: sha512-c/hfooPx+RBIOPM09GSxABOZhYPblDoyaGhqBkD/59vtpN21jEuWKDlM0KYTvqJVlSYjKs0tBcIdeXKChlSPtw==}
     hasBin: true
+
+  openapi-typescript@7.1.0:
+    resolution: {integrity: sha512-qxjGhIO6ODCGximE2HiozkPUNbO4y7F2OQyGa+gcn6TdZMMtmuiyDPqoKmf+Y4VlvQRfhJUTU635w8KfZVeuVA==}
+    hasBin: true
+    peerDependencies:
+      typescript: ^5.x
 
   openapi3-ts@4.2.2:
     resolution: {integrity: sha512-+9g4actZKeb3czfi9gVQ4Br2Ju3KwhCAQJBNaKgye5KggqcBLIhFHH+nIkcm0BUX00TrAJl6dH4JWgM4G4JWrw==}
@@ -4626,6 +4668,10 @@ packages:
   parse-json@5.2.0:
     resolution: {integrity: sha512-ayCKvm/phCGxOkYRSCM82iDwct8/EonSEgCSxWxD7ve6jHggsFl4fZVQBPRNgQoKiuV/odhFrGzQXZwbifC8Rg==}
     engines: {node: '>=8'}
+
+  parse-json@8.1.0:
+    resolution: {integrity: sha512-rum1bPifK5SSar35Z6EKZuYPJx85pkNaFrxBK3mwdfSJ1/WKbYrjoW/zTPSjRRamfmVX1ACBIdFAO0VRErW/EA==}
+    engines: {node: '>=18'}
 
   parse-path@7.0.0:
     resolution: {integrity: sha512-Euf9GG8WT9CdqwuWJGdf3RkUcTBArppHABkO7Lm8IzRQp0e2r/kkFnmhu4TSK30Wcu5rVAZLmfPKSBBi9tWFog==}
@@ -5651,6 +5697,10 @@ packages:
     resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
     engines: {node: '>=14.16'}
 
+  type-fest@4.23.0:
+    resolution: {integrity: sha512-ZiBujro2ohr5+Z/hZWHESLz3g08BBdrdLMieYFULJO+tWc437sn8kQsWLJoZErY8alNhxre9K4p3GURAG11n+w==}
+    engines: {node: '>=16'}
+
   type-is@1.6.18:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
     engines: {node: '>= 0.6'}
@@ -6077,6 +6127,9 @@ packages:
   yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
 
+  yaml-ast-parser@0.0.43:
+    resolution: {integrity: sha512-2PTINUwsRqSd+s8XxKaJWQlUuEMHJQyEuh2edBbW8KNJz0SJPwUSD2zRWqezFEdN7IzAgeuYHFUCF7o8zRdZ0A==}
+
   yaml-eslint-parser@1.2.3:
     resolution: {integrity: sha512-4wZWvE398hCP7O8n3nXKu/vdq1HcH01ixYlCREaJL5NUMwQ0g3MaGFUBNSlmBtKmhbtVG/Cm6lyYmSVTEVil8A==}
     engines: {node: ^14.17.0 || >=16.0.0}
@@ -6237,7 +6290,7 @@ snapshots:
       '@babel/traverse': 7.24.8
       '@babel/types': 7.24.9
       convert-source-map: 2.0.0
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -6437,7 +6490,7 @@ snapshots:
       '@babel/helper-split-export-declaration': 7.24.7
       '@babel/parser': 7.24.8
       '@babel/types': 7.24.9
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -6791,7 +6844,7 @@ snapshots:
   '@eslint/config-array@0.17.1':
     dependencies:
       '@eslint/object-schema': 2.1.4
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -6821,7 +6874,7 @@ snapshots:
   '@eslint/eslintrc@3.1.0':
     dependencies:
       ajv: 6.12.6
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       espree: 10.1.0
       globals: 14.0.0
       ignore: 5.3.1
@@ -6898,7 +6951,7 @@ snapshots:
       '@antfu/install-pkg': 0.1.1
       '@antfu/utils': 0.7.10
       '@iconify/types': 2.0.0
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       kolorist: 1.8.0
       local-pkg: 0.5.0
       mlly: 1.7.1
@@ -6962,7 +7015,7 @@ snapshots:
 
   '@koa/router@12.0.1':
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       http-errors: 2.0.0
       koa-compose: 4.1.0
       methods: 1.1.2
@@ -6972,7 +7025,7 @@ snapshots:
 
   '@kwsites/file-exists@1.1.1':
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -7053,9 +7106,9 @@ snapshots:
 
   '@npmcli/agent@2.2.2':
     dependencies:
-      agent-base: 7.1.1
+      agent-base: 7.1.1(supports-color@9.4.0)
       http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.5
+      https-proxy-agent: 7.0.5(supports-color@9.4.0)
       lru-cache: 10.4.3
       socks-proxy-agent: 8.0.4
     transitivePeerDependencies:
@@ -7565,7 +7618,7 @@ snapshots:
       ajv: 8.17.1
       chalk: 4.1.2
       compare-versions: 6.1.1
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       esbuild: 0.19.12
       esutils: 2.0.3
       fs-extra: 11.2.0
@@ -7708,6 +7761,32 @@ snapshots:
   '@polka/url@1.0.0-next.25': {}
 
   '@popperjs/core@2.11.8': {}
+
+  '@redocly/ajv@8.11.0':
+    dependencies:
+      fast-deep-equal: 3.1.3
+      json-schema-traverse: 1.0.0
+      require-from-string: 2.0.2
+      uri-js: 4.4.1
+
+  '@redocly/config@0.7.0': {}
+
+  '@redocly/openapi-core@1.18.1(encoding@0.1.13)(supports-color@9.4.0)':
+    dependencies:
+      '@redocly/ajv': 8.11.0
+      '@redocly/config': 0.7.0
+      colorette: 1.4.0
+      https-proxy-agent: 7.0.5(supports-color@9.4.0)
+      js-levenshtein: 1.1.6
+      js-yaml: 4.1.0
+      lodash.isequal: 4.5.0
+      minimatch: 5.1.6
+      node-fetch: 2.7.0(encoding@0.1.13)
+      pluralize: 8.0.0
+      yaml-ast-parser: 0.0.43
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
 
   '@rollup/plugin-alias@5.1.0(rollup@4.18.1)':
     dependencies:
@@ -8225,7 +8304,7 @@ snapshots:
       '@typescript-eslint/types': 7.16.1
       '@typescript-eslint/typescript-estree': 7.16.1(typescript@5.5.4)
       '@typescript-eslint/visitor-keys': 7.16.1
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       eslint: 9.8.0
     optionalDependencies:
       typescript: 5.5.4
@@ -8238,7 +8317,7 @@ snapshots:
       '@typescript-eslint/types': 8.0.0-alpha.40
       '@typescript-eslint/typescript-estree': 8.0.0-alpha.40(typescript@5.5.4)
       '@typescript-eslint/visitor-keys': 8.0.0-alpha.40
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       eslint: 9.8.0
     optionalDependencies:
       typescript: 5.5.4
@@ -8264,7 +8343,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 7.16.1(typescript@5.5.4)
       '@typescript-eslint/utils': 7.16.1(eslint@9.8.0)(typescript@5.5.4)
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       eslint: 9.8.0
       ts-api-utils: 1.3.0(typescript@5.5.4)
     optionalDependencies:
@@ -8276,7 +8355,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 8.0.0-alpha.40(typescript@5.5.4)
       '@typescript-eslint/utils': 8.0.0-alpha.40(eslint@9.8.0)(typescript@5.5.4)
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       ts-api-utils: 1.3.0(typescript@5.5.4)
     optionalDependencies:
       typescript: 5.5.4
@@ -8294,7 +8373,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 7.16.1
       '@typescript-eslint/visitor-keys': 7.16.1
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -8309,7 +8388,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.0.0-alpha.40
       '@typescript-eslint/visitor-keys': 8.0.0-alpha.40
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -8324,7 +8403,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.0.0-alpha.45
       '@typescript-eslint/visitor-keys': 8.0.0-alpha.45
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -8707,13 +8786,13 @@ snapshots:
 
   agent-base@6.0.2:
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
-  agent-base@7.1.1:
+  agent-base@7.1.1(supports-color@9.4.0):
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -9139,6 +9218,8 @@ snapshots:
 
   colord@2.9.3: {}
 
+  colorette@1.4.0: {}
+
   combined-stream@1.0.8:
     dependencies:
       delayed-stream: 1.0.0
@@ -9340,9 +9421,11 @@ snapshots:
     dependencies:
       ms: 2.1.3
 
-  debug@4.3.5:
+  debug@4.3.5(supports-color@9.4.0):
     dependencies:
       ms: 2.1.2
+    optionalDependencies:
+      supports-color: 9.4.0
 
   decompress-response@6.0.0:
     dependencies:
@@ -9763,7 +9846,7 @@ snapshots:
   eslint-plugin-import-x@0.5.3(eslint@9.8.0)(typescript@5.5.4):
     dependencies:
       '@typescript-eslint/utils': 7.16.1(eslint@9.8.0)(typescript@5.5.4)
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       doctrine: 3.0.0
       eslint: 9.8.0
       eslint-import-resolver-node: 0.3.9
@@ -9781,7 +9864,7 @@ snapshots:
     dependencies:
       '@rtsao/scc': 1.1.0
       '@typescript-eslint/utils': 7.16.1(eslint@9.8.0)(typescript@5.5.4)
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       doctrine: 3.0.0
       eslint: 9.8.0
       eslint-import-resolver-node: 0.3.9
@@ -9800,7 +9883,7 @@ snapshots:
       '@es-joy/jsdoccomment': 0.46.0
       are-docs-informative: 0.0.2
       comment-parser: 1.4.1
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       escape-string-regexp: 4.0.0
       eslint: 9.8.0
       esquery: 1.6.0
@@ -9816,7 +9899,7 @@ snapshots:
       '@es-joy/jsdoccomment': 0.46.0
       are-docs-informative: 0.0.2
       comment-parser: 1.4.1
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       escape-string-regexp: 4.0.0
       eslint: 9.8.0
       esquery: 1.6.0
@@ -9890,7 +9973,7 @@ snapshots:
 
   eslint-plugin-toml@0.11.1(eslint@9.8.0):
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       eslint: 9.8.0
       eslint-compat-utils: 0.5.1(eslint@9.8.0)
       lodash: 4.17.21
@@ -9975,7 +10058,7 @@ snapshots:
 
   eslint-plugin-yml@1.14.0(eslint@9.8.0):
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       eslint: 9.8.0
       eslint-compat-utils: 0.5.1(eslint@9.8.0)
       lodash: 4.17.21
@@ -10025,7 +10108,7 @@ snapshots:
       ajv: 6.12.6
       chalk: 4.1.2
       cross-spawn: 7.0.3
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       escape-string-regexp: 4.0.0
       eslint-scope: 8.0.2
       eslint-visitor-keys: 4.0.0
@@ -10522,8 +10605,8 @@ snapshots:
 
   http-proxy-agent@7.0.2:
     dependencies:
-      agent-base: 7.1.1
-      debug: 4.3.5
+      agent-base: 7.1.1(supports-color@9.4.0)
+      debug: 4.3.5(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -10534,14 +10617,14 @@ snapshots:
   https-proxy-agent@5.0.1:
     dependencies:
       agent-base: 6.0.2
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
-  https-proxy-agent@7.0.5:
+  https-proxy-agent@7.0.5(supports-color@9.4.0):
     dependencies:
-      agent-base: 7.1.1
-      debug: 4.3.5
+      agent-base: 7.1.1(supports-color@9.4.0)
+      debug: 4.3.5(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -10574,7 +10657,7 @@ snapshots:
   importx@0.3.11:
     dependencies:
       bundle-require: 5.0.0(esbuild@0.20.2)
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       esbuild: 0.20.2
       jiti: 1.21.6
       pathe: 1.1.2
@@ -10586,6 +10669,8 @@ snapshots:
   imurmurhash@0.1.4: {}
 
   indent-string@4.0.0: {}
+
+  index-to-position@0.1.2: {}
 
   inflight@1.0.6:
     dependencies:
@@ -10610,7 +10695,7 @@ snapshots:
     dependencies:
       '@ioredis/commands': 1.2.0
       cluster-key-slot: 1.1.2
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       denque: 2.1.0
       lodash.defaults: 4.2.0
       lodash.isarguments: 3.1.0
@@ -10820,6 +10905,8 @@ snapshots:
 
   jiti@1.21.6: {}
 
+  js-levenshtein@1.1.6: {}
+
   js-tokens@4.0.0: {}
 
   js-tokens@9.0.0: {}
@@ -10909,7 +10996,7 @@ snapshots:
 
   koa-send@5.0.1:
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       http-errors: 1.8.1
       resolve-path: 1.4.0
     transitivePeerDependencies:
@@ -10929,7 +11016,7 @@ snapshots:
       content-disposition: 0.5.4
       content-type: 1.0.5
       cookies: 0.9.1
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       delegates: 1.0.0
       depd: 2.0.0
       destroy: 1.2.0
@@ -11025,6 +11112,8 @@ snapshots:
   lodash.isarguments@3.1.0: {}
 
   lodash.isempty@4.4.0: {}
+
+  lodash.isequal@4.5.0: {}
 
   lodash.isplainobject@4.0.6: {}
 
@@ -11127,7 +11216,7 @@ snapshots:
 
   micromark@2.11.4:
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       parse-entities: 2.0.0
     transitivePeerDependencies:
       - supports-color
@@ -11665,7 +11754,13 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
+  openapi-fetch@0.10.2:
+    dependencies:
+      openapi-typescript-helpers: 0.0.9
+
   openapi-types@12.1.3: {}
+
+  openapi-typescript-helpers@0.0.9: {}
 
   openapi-typescript@6.7.6:
     dependencies:
@@ -11675,6 +11770,17 @@ snapshots:
       supports-color: 9.4.0
       undici: 5.28.4
       yargs-parser: 21.1.1
+
+  openapi-typescript@7.1.0(encoding@0.1.13)(typescript@5.5.4):
+    dependencies:
+      '@redocly/openapi-core': 1.18.1(encoding@0.1.13)(supports-color@9.4.0)
+      ansi-colors: 4.1.3
+      parse-json: 8.1.0
+      supports-color: 9.4.0
+      typescript: 5.5.4
+      yargs-parser: 21.1.1
+    transitivePeerDependencies:
+      - encoding
 
   openapi3-ts@4.2.2:
     dependencies:
@@ -11784,6 +11890,12 @@ snapshots:
       error-ex: 1.3.2
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
+
+  parse-json@8.1.0:
+    dependencies:
+      '@babel/code-frame': 7.24.7
+      index-to-position: 0.1.2
+      type-fest: 4.23.0
 
   parse-path@7.0.0:
     dependencies:
@@ -12456,7 +12568,7 @@ snapshots:
     dependencies:
       '@kwsites/file-exists': 1.1.1
       '@kwsites/promise-deferred': 1.1.1
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -12487,8 +12599,8 @@ snapshots:
 
   socks-proxy-agent@8.0.4:
     dependencies:
-      agent-base: 7.1.1
-      debug: 4.3.5
+      agent-base: 7.1.1(supports-color@9.4.0)
+      debug: 4.3.5(supports-color@9.4.0)
       socks: 2.8.3
     transitivePeerDependencies:
       - supports-color
@@ -12878,6 +12990,8 @@ snapshots:
 
   type-fest@3.13.1: {}
 
+  type-fest@4.23.0: {}
+
   type-is@1.6.18:
     dependencies:
       media-typer: 0.3.0
@@ -13122,7 +13236,7 @@ snapshots:
   vite-node@2.0.4(@types/node@20.14.11)(terser@5.31.3):
     dependencies:
       cac: 6.7.14
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       pathe: 1.1.2
       tinyrainbow: 1.2.0
       vite: 5.3.4(@types/node@20.14.11)(terser@5.31.3)
@@ -13163,7 +13277,7 @@ snapshots:
     dependencies:
       '@antfu/utils': 0.7.10
       '@rollup/pluginutils': 5.1.0(rollup@4.18.1)
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       error-stack-parser-es: 0.1.5
       fs-extra: 11.2.0
       open: 10.1.0
@@ -13237,7 +13351,7 @@ snapshots:
 
   vue-eslint-parser@9.4.3(eslint@9.8.0):
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.5(supports-color@9.4.0)
       eslint: 9.8.0
       eslint-scope: 7.2.2
       eslint-visitor-keys: 3.4.3
@@ -13340,6 +13454,8 @@ snapshots:
   yallist@3.1.1: {}
 
   yallist@4.0.0: {}
+
+  yaml-ast-parser@0.0.43: {}
 
   yaml-eslint-parser@1.2.3:
     dependencies:

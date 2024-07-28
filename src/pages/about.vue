@@ -4,28 +4,27 @@ import type { MemberInfo } from '~/components/MemberAvatar.vue'
 
 useHead({ title: 'About' })
 
-const members: MemberInfo[] = [
-  {
-    name: 'Vladislav Deryabkin',
-    color: 'green',
-    city: 'Perm',
-    bio: 'At the keyboard since 3. Used to make robots. Now I enjoy swimming and diving into frontend.',
-    telegram: 'evermake',
-    github: 'evermake',
-  },
-  {
-    name: 'Artem Bulgakov',
-    color: 'red',
-    city: 'Volgodonsk',
-    bio: 'The inventor. I love doing good.  I was at the North Pole.',
-  },
-  {
-    name: 'Ruslan Bel\'kov',
-    color: 'purple',
-    city: 'Novosibirsk',
-    bio: 'Песня, лей колыбельную для кораблей.',
-  },
-]
+let members: Ref<MemberInfo[] | undefined>
+if (import.meta.client) {
+  const { data, error } = useMembers()
+  members = data
+
+  watch(error, (newMembersError) => {
+    console.error('Failed to load members:', newMembersError)
+  })
+}
+else {
+  members = ref(undefined)
+}
+
+const membersShuffled = computed(() => {
+  if (members.value) {
+    const copy = [...members.value]
+    shuffle(copy)
+    return copy
+  }
+  return undefined
+})
 
 interface PhotoInfo {
   path: string
@@ -38,10 +37,6 @@ const photos: PhotoInfo[] = [
   { path: '/img/108-photos/garage.jpg' },
   { path: '/img/108-photos/podcast.jpg' },
 ]
-
-// A little magic to make members shuffling SSR-friendly.
-const seed = useState('members-shuffle-seed', () => Math.random().toString())
-shuffle(members, getPrng(seed.value))
 
 const heading = ref<HTMLHeadingElement>()
 
@@ -90,10 +85,13 @@ onMounted(() => {
 
         <p>We are a small team of students from all over the world (i.e. Russia) who have accidentally united together by enthusiasm and the desire to make our student life more enjoyable.</p>
 
-        <div class="not-prose flex flex-wrap items-start justify-center gap-4">
+        <div
+          v-if="membersShuffled"
+          class="not-prose flex flex-wrap items-start justify-center gap-4"
+        >
           <MemberAvatar
-            v-for="member in members"
-            :key="member.name"
+            v-for="member in membersShuffled"
+            :key="member.fullname"
             :member="member"
           />
         </div>
