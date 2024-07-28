@@ -2,12 +2,12 @@
 import type Colors from '#tailwind-config/theme/colors'
 
 export interface MemberInfo {
-  name: string
+  fullname: string
   color: keyof typeof Colors
   bio: string
-  city?: string
-  telegram?: string
-  github?: string
+  hometown?: string | null
+  telegram?: string | null
+  github?: string | null
 }
 
 defineProps<{
@@ -93,7 +93,7 @@ onMounted(() => {
       class="invisible absolute left-0 top-0 flex w-[min(300px,calc(100vw-32px))] flex-col gap-2 rounded-lg border border-gray-200 bg-gray-100 p-6 shadow-sm group-hover/member:visible dark:border-gray-700 dark:bg-gray-800"
     >
       <h4 class="flex items-center justify-between">
-        <span class="text-lg font-medium">{{ member.name }}</span>
+        <span class="text-lg font-medium">{{ member.fullname }}</span>
         <div class="flex items-center justify-between gap-2 text-xl">
           <NuxtLink
             v-if="member.github"
@@ -121,11 +121,11 @@ onMounted(() => {
       </h4>
       <div class="items flex flex-col items-start">
         <p
-          v-if="member.city"
+          v-if="member.hometown"
           class="inline-flex items-center gap-1 text-gray-500 dark:text-gray-400"
         >
           <UIcon name="i-ph-map-pin" />
-          <span>{{ member.city }}</span>
+          <span>{{ member.hometown }}</span>
         </p>
       </div>
 
@@ -135,7 +135,7 @@ onMounted(() => {
     </div>
     <div class="relative">
       <UAvatar
-        :alt="member.name"
+        :alt="member.fullname"
         size="xl"
         class="cursor-default opacity-70 transition-opacity group-hover/member:opacity-100"
         :ui="{

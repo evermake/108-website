@@ -62,6 +62,7 @@ export default defineNuxtConfig({
       accountsApiUrl: 'https://api.innohassle.ru/accounts/v0',
       eventsApiUrl: 'https://api.innohassle.ru/events/v0',
       searchApiUrl: 'https://api.innohassle.ru/search/v0',
+      internalsApiUrl: '',
 
       // Should be the name of provider supported by Accounts API
       accountsAuthProvider: 'innopolis',
